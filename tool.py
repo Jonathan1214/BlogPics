@@ -135,8 +135,6 @@ def handle_photo(blog_path):
         if (os.path.exists(description_file_name)):
             info = get_photo_description(description_file_name)
             print(info)
-            with open("data.json", "w", encoding="utf-8") as fp:
-                json.dump(info, fp, ensure_ascii=False, indent=4)
         date = datetime.strptime(date_str, "%Y-%m-%d")
         year_month = date_str[0:7]
         if i == 0:  # 处理第一个文件
